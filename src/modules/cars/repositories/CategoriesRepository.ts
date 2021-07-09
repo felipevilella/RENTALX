@@ -1,5 +1,5 @@
-import { Category } from "../modules/cars/model/Category";
-import { ICategoriesRepository, ICreateCategoryDTO } from "../modules/cars/repositories/ICategoriesRepository";
+import { Category } from "../model/Category";
+import { ICategoriesRepository, ICreateCategoryDTO } from "./ICategoriesRepository";
 
 
 
@@ -27,8 +27,7 @@ class CategoriesRepository implements ICategoriesRepository {
   }
 
   findByName(name:string) {
-    let category = this.categories.find((category) => category.name = name);
-    return category;
+    return this.categories.find((category) => category.name = name);
   }
 }
 
